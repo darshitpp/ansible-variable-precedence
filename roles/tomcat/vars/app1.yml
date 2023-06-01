@@ -1,0 +1,4 @@
+tomcat:
+    variable1: v4
+    variable2: v5
+    variable3: v6

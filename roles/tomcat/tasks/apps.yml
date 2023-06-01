@@ -1,0 +1,10 @@
+- name: Import {{ deployment.1 }} yml
+  ansible.builtin.include_vars:
+    file: "{{ item }}"
+  with_items:
+    - defaults.yml
+    - "{{ deployment.1 }}.yml" # app1.yml or app2.yml or app3.yml
+
+- name: Display variables
+  debug:
+    msg: "{{ tomcat.variable1 }} and {{ tomcat.variable2 }} and {{ tomcat.variable3 }}"

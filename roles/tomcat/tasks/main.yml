@@ -1,0 +1,6 @@
+- name: Deployment of Tomcat
+  include_tasks:
+    file: "{{ deployment.0.key }}.yml"
+  loop: "{{ tomcat_to_deploy | dict2items | subelements('value') }}"
+  loop_control:
+    loop_var: deployment

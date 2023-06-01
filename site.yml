@@ -1,0 +1,13 @@
+- name: Deploy tomcats
+  hosts: tomcat_servers  
+  hosts: localhost
+  vars_files:
+  roles:
+    - role: tomcat
+      vars:
+        tomcat_to_deploy:
+          apps: 
+            - app1
+            - app2
+  tags:
+    - tomcat
